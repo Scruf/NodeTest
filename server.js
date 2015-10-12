@@ -1,9 +1,16 @@
 var express = require('express'),
     bodyParser = require('body-parser'),
     morgan = require('morgan'),
-    config = require("./config.js");
-    
-    
+    moongoose = require("mongoose");
+   
+moongoose.connect('mongodb://localhost/Users', function(err){
+    if(err){
+        console.log(err);
+    }
+    else{
+        console.log("bad");
+    }
+});
     
 var app = express();
 
